@@ -2,7 +2,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.fxn.BubbleTabBar
-        android:id="@+id/bubbleTabBar"
+        android:id="@+id/bubble_tab_bar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_gravity="bottom"

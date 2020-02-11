@@ -24,7 +24,7 @@
 
     <item
         android:id="@+id/menu_activity"
-        android:icon="@drawable/ic_search"
+        android:icon="@drawable/ic_love"
         android:title="Activity"
         android:iconTint="@color/colorBrand"
         tools:targetApi="o" />
