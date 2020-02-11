@@ -1,28 +1,44 @@
 package com.xavir.zinx.utils;
 
 import android.content.Context;
+import android.content.Intent;
+import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.fxn.BubbleTabBar;
-import com.fxn.OnBubbleClickListener;
+import androidx.annotation.NonNull;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.xavir.zinx.HomeActivity;
+import com.xavir.zinx.ProfileActivity;
 import com.xavir.zinx.R;
 
 public class BottomNavigationViewHelper {
     private static final String TAG = "BottomNavigationViewHelper";
 
-    public static void setupBottomNavigationView(BubbleTabBar bubbleTabBar, final Context context) {
-        bubbleTabBar.addBubbleListener(new OnBubbleClickListener() {
+    public static void setupBottomNavigationView(BottomNavigationView view, final Context context, final int activityNumber) {
+        view.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onBubbleClick(int i) {
-                switch (i) {
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
                     case R.id.menu_home:
-                        Toast.makeText(context, "Home", Toast.LENGTH_SHORT).show();
+                        context.startActivity(new Intent(context, HomeActivity.class));
                         break;
-                    case R.id.menu_search:
-                        Toast.makeText(context, "Search", Toast.LENGTH_SHORT).show();
+                    case R.id.menu_profile:
+                        context.startActivity(new Intent(context, ProfileActivity.class));
                         break;
                 }
+                return false;
             }
         });
+
+        view.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
+            @Override
+            public void onNavigationItemReselected(@NonNull MenuItem item) {
+                return;
+            }
+        });
+
+        MenuItem menuItem = view.getMenu().getItem(activityNumber);
+        menuItem.setChecked(true);
     }
 }
