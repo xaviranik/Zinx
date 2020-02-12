@@ -17,7 +17,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:fontFamily="@font/open_sans_semibold"
-                android:text="John Snow"
+                android:text="jon.snow"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
         </LinearLayout>
