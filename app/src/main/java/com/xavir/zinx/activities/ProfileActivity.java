@@ -1,10 +1,11 @@
-package com.xavir.zinx;
+package com.xavir.zinx.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.xavir.zinx.R;
 import com.xavir.zinx.utils.BottomNavigationViewHelper;
 
 public class ProfileActivity extends AppCompatActivity {

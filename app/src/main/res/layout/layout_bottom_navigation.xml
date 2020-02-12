@@ -7,6 +7,7 @@
         android:layout_gravity="bottom"
         android:background="@drawable/white_grey_border_top"
         android:layout_height="50dp"
-        app:menu="@menu/menu_bottom_navigation">
+        app:menu="@menu/menu_bottom_navigation"
+        app:labelVisibilityMode="unlabeled">
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 </merge>

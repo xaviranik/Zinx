@@ -3,13 +3,12 @@ package com.xavir.zinx.utils;
 import android.content.Context;
 import android.content.Intent;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.xavir.zinx.HomeActivity;
-import com.xavir.zinx.ProfileActivity;
+import com.xavir.zinx.activities.HomeActivity;
+import com.xavir.zinx.activities.ProfileActivity;
 import com.xavir.zinx.R;
 
 public class BottomNavigationViewHelper {
